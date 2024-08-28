@@ -221,10 +221,10 @@ Contenido de lado derecho
 }
 
 .boton-encriptar:hover,
-.boton-desencriptar:hover,
-.boton-copiar{
+.boton-desencriptar:hover{
     transform: scale(0.97);
 }
+
 
 /*-------------------------
 Contenido del Pie de Página.
