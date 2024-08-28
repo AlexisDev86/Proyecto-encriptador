@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styles.css">
+
+    <title>Encriptador</title>
+</head>
+<body>
+<!--Cabeza de página-->
+<header>
+    <img src="./assets/logo.png" alt="limg-logo" class="logo">
+</header>
+<!--Contenido principal--->
+<main>
+    <!--Contenido de lado izquierdo-->
+    <section class="contenedor-izquierdo">
+        <textarea class="contenedor-texto" placeholder="Ingrese texto aquí"></textarea>
+        <div class="texto-aviso">
+            <img src="./assets/Group.png">
+            <p class="parrafo-aviso">Solo letras  minúsculas y sin  tildes.</p>
+        </div>
+        <div class="contenedor-botones">
+            <button type="submit" class="boton-encriptar">Encriptar</button>
+            <button type="submit" class="boton-desencriptar">Desencriptar</button>
+        </div>
+    </section>
+    <!--Contenido de lado derecho-->
+    <section class="contenedor-derecho">
+        <div class="contenedor-texto-derecho">
+            <img src="./assets/Muñeco.png" alt="imagen de joven" class="img-muñeco">
+            <p class="texto1">Ningún mensaje fue encontrado</p>
+            <p class="texto2">Ingresa el texto que desea encriptar o desencriptar</p>
+        </div>
+        <textarea type="mensaje" class="contenedor-texto-encriptado" readonly></textarea>
+        <button type="submit" class="boton-copiar">Copiar</button>
+    </section>
+
+</main>
+<!--Pie de página-->
+<footer>
+    <p class="pie-pagina">&copy;Desarrollado por Alexis Gallardo M 2024</p>
+</footer>
+
+<script src="./js/script.js"></script>
+
+</body>
+</html>

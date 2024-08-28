@@ -1,0 +1,326 @@
+/*----Globales CSS-----*/
+
+:root{
+    --fondo:#F3F5FC;
+    --color-fondo:#FFFFFF;
+    --color-secundario:#0A3871;
+    --color-gris:#67808E;
+    --color-blancoAzul:#D8DFE8;
+    --color-azulOscuro:#0a38718a;
+    --color-grisOscuro:#343A40;
+    --color-grisClaro:#495057;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Krub',sans-serif;
+    text-decoration: none;
+    background: var(--fondo);
+}
+html{
+    font-size: 62.5%;
+}
+
+
+body{
+    height: 100%;
+}
+img{
+    max-width: 100%;
+}
+/*----------
+Encabezado
+----------*/
+
+header{
+    position: absolute;
+    margin: 40px 0 0 40px;
+}
+header.logo{
+    display: flex;
+    align-items: flex-start;
+    width: 120px;
+    height: 48px;
+}
+/*-----------------
+Contenido Principal
+------------------*/
+main{
+    display: flex;
+    flex-direction: row;
+}
+/*---------------------------
+Contenedor de lado izquierdo
+-----------------------------*/
+
+.contenedor-izquierdo{
+    width: 60%;
+    margin: 168px 0 0 140px;
+    background: transparent;
+}
+.contenedor-texto{
+    width: 660px;
+    height: 288px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+    border:none;
+    outline: none;
+    border-radius: 15px;
+    resize: none;
+}
+.contenedor-texto::placeholder,:focus{
+    color: var(--color-secundario);
+}
+.texto-aviso{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: 8px;
+    position: absolute;
+    top: 500px;
+}
+.parrafo-aviso{
+    width: 100%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    opacity: 0.8;
+    color: var(--color-gris);
+}
+.contenedor-botones{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 8px;
+    position: absolute;
+    top: 526px;
+}
+.boton-encriptar{
+    width: 328px;
+    height: 67px;
+    padding: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: white;
+    background: var(--color-secundario);
+    border: 1px solid var(--color-secundario);
+    border-radius: 24px;
+    cursor: pointer;
+}
+.boton-encriptar:active{
+    box-shadow: inset 2px 2px 4px var(--color-fondo);
+    inset: -3px -4px 8px var(--color-secundario);
+    color:var(--color-blancoAzul) ;
+}
+.boton-desencriptar{
+    width: 328px;
+    height: 67px;
+    padding: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: var(--color-secundario);
+    background: var(--color-blancoAzul);
+    border: 1px solid var(--color-secundario);
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.boton-desencriptar:active{
+    box-shadow: inset 2px 2px 4px var(--color-secundario);
+    inset: -3px -4px 8px var(--color-fondo);
+    color: var(--color-azulOscuro);
+}
+/*--------------------
+Contenido de lado derecho
+-------------------------*/
+.contenedor-derecho{
+    width: 300px;
+    height: 580px;
+    background: var(--color-fondo);
+    box-shadow: 10px 24px 32px -8px var(--color-grisOscuro);
+    position: relative;
+    margin-top: 40px;
+    border-radius: 32px;
+    text-align: center;
+}
+.contenedor-texto-derecho{
+    width: 250px;
+    margin: 50% auto auto;
+    background: var(--color-fondo);
+}
+.img-muñeco{
+    background: var(--color-fondo);
+}
+.texto1{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--color-grisOscuro);
+    background: var(--color-fondo);
+}
+.texto2{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--color-grisOscuro);
+    background: var(--color-fondo);
+}
+.contenedor-texto-encriptado{
+    width: 100%;
+    height: 485px;
+    position: absolute;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--color-grisClaro);
+    background: transparent;
+    border-top-right-radius: 32px;
+    border-top-left-radius: 32px;
+    border: none;
+    resize: none;
+}
+.boton-copiar{
+    width: 224px;
+    height: 67px;
+    margin: 23px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+   visibility: hidden;
+    padding: 24px;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    background: var(--color-blancoAzul);
+    border: 1px solid var(--color-azulOscuro);
+    border-radius: 20px;
+    cursor: pointer;
+}
+.boton-copiar:active{
+    box-shadow: inset 2px 2px 4px var(--color-secundario);
+    inset: -3px -4px 8px var(--color-fondo);
+    color: var(--color-azulOscuro);
+
+}
+
+.boton-encriptar:hover,
+.boton-desencriptar:hover,
+.boton-copiar{
+    transform: scale(0.97);
+}
+
+/*-------------------------
+Contenido del Pie de Página.
+--------------------------*/
+footer{
+    margin-top: 30px;
+    padding: 10px;
+    border-top: 2px solid var(--fondo);
+    /*color: var(--color-gris);*/
+    text-align: center;
+    height: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-grisOscuro);
+}
+/*-----------
+Media Queries
+-------------*/
+
+@media (max-width: 1250px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .contenedor-izquierdo{
+        margin: 168px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .contenedor-botones{
+        display: flex;
+        flex-direction: column;
+        position: inherit;
+    }
+    .texto-aviso{
+        position: inherit;
+        margin: 15px;
+    }
+
+    .contenedor-derecho{
+        width: 665px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .contenedor-texto-derecho{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position:absolute;
+        bottom: 20%;
+        font-size: 24px;
+        font-weight: 700;
+    }
+    .img-muñeco{
+        display: none;
+    }
+    .boton-copiar{
+        position: inherit;
+        width: 100%;
+    }
+    .contenedor-texto-encriptado{
+        width: 100%;
+        height: 210px;
+        padding: 10px;
+    }
+
+}
+
+@media (max-width: 720px) {
+
+    header .logo{
+        width: 100%;
+        background: var(--fondo);
+        padding: 2px;
+    }
+    .contenedor-izquierdo{
+        width: 90%;
+        font-size: 24px;
+    }
+    .contenedor-botones{
+        display: grid;
+        gap: 21px;
+    }
+    .contenedor-derecho{
+        width: 90%;
+    }
+    .pie-pagina{
+        font-size: 20px;
+    }
+
+
+}
